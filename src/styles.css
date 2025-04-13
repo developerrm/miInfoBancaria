@@ -1,0 +1,190 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+    text-align: left; /* Forzar alineación a la izquierda */
+    direction: ltr; /* Asegurar dirección de texto de izquierda a derecha */
+    display: block;
+  }
+  
+  .bank-accounts-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left; /* Forzar alineación a la izquierda */
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  .user-info {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: left; /* Forzar alineación a la izquierda */
+  }
+  
+  .user-info h2,
+  .user-info h3 {
+    margin: 5px 0;
+    font-weight: 500;
+    text-align: left; /* Forzar alineación a la izquierda */
+  }
+  
+  /* Cards container */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Bank card styles */
+  .bank-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-align: left; /* Forzar alineación a la izquierda */
+  }
+  
+  .bank-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .bank-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left; /* Forzar alineación a la izquierda */
+  }
+  
+  .account-number {
+    margin: 15px 0;
+    text-align: left; /* Forzar alineación a la izquierda */
+  }
+  
+  .label {
+    display: block;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+    text-align: left; /* Forzar alineación a la izquierda */
+  }
+  
+  .value {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: left; /* Forzar alineación a la izquierda */
+  }
+  
+  .card-footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #95a5a6;
+    font-style: italic;
+  }
+  
+  /* Popup styles */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left; /* Forzar alineación a la izquierda */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #7f8c8d;
+  }
+  
+  .popup-content h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .copy-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .copy-button {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    text-align: center;
+  }
+  
+  .copy-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .copy-message {
+    margin-top: 15px;
+    text-align: center;
+    color: #27ae60;
+    font-weight: 500;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .popup-content {
+      width: 95%;
+      padding: 20px;
+    }
+  }
+  
